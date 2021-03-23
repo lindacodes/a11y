@@ -39,6 +39,20 @@ p {
 
 p a {
   color: var(--link-color);
+  border: 1px solid transparent;
+  border-bottom-color: var(--link-color);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+p a:hover {
+  border-bottom-width: 2px;
+}
+
+p a:focus {
+  outline: none;
+  background: var(--link-color);
+  color: white;
 }
 
 header {
@@ -103,7 +117,8 @@ footer {
   border-bottom: 1px solid var(--primary-color);
   color: var(--primary-color);
   margin: 0 0 -1px;
-  padding: 1rem;
+  outline: none;
+  padding: 0.5rem;
   position: relative;
   text-align: left;
   transition: all 0.1s ease-in-out;
@@ -116,11 +131,17 @@ footer {
   color: #fff;
 }
 
-.accordion button:focus {
-  background: var(--link-color);
+.accordion button span {
+  display: block;
+  padding: 0.5rem;
+  border: 2px solid transparent;
 }
 
-.accordion button:after {
+.accordion button:focus span {
+  border-color: black;
+}
+
+.accordion button span:after {
   display: block;
   content: "+";
   position: absolute;
@@ -129,7 +150,7 @@ footer {
   transform: translateY(-50%);
 }
 
-.accordion button[aria-expanded="true"]:after {
+.accordion button[aria-expanded="true"] span:after {
   content: "–";
 }
 
