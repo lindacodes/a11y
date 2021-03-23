@@ -1,26 +1,146 @@
+:root {
+  --main-bg-color: #fff;
+  --primary-color: #068485;
+  --font-color: #222f3e;
+  --font-color-light: #fff;
+  --footer-bg-color: #c8d6e5;
+  --link-color: #341f97;
+}
+
+.hidden {
+  display: none;
+}
+
 body {
-  color: #111;
+  background: var(--main-bg-color);
+  color: var(--font-color);
+  min-height: 100vh;
+  position: relative;
 }
 
 #skip-link {
-  position: absolute;
-  top: 0;
-  left: -101vw;
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
   background-color: lightblue;
   border: 1px solid rebeccapurple;
+  left: -101vw;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
 }
 
 #skip-link:focus {
   left: 0;
 }
 
-ul {
-  list-style: none;
+p {
+  line-height: 1.4;
 }
 
-.hidden {
-  display: none;
+p a {
+  color: var(--link-color);
+}
+
+header {
+  background: var(--primary-color);
+  color: var(--font-color-light);
+  text-align: right;
+  padding: 0 0.5rem;
+}
+
+header a {
+  color: var(--font-color-light);
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 40rem;
+  padding-bottom: 4rem;
+}
+
+footer {
+  background: var(--footer-bg-color);
+  bottom: 0;
+  color: var(--font-color);
+  font-size: 0.9rem;
+  padding: 0.7rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.accordion {
+  border: 2px solid var(--primary-color);
+}
+
+.accordion h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.accordion h2:first-child button {
+  border-top: none;
+}
+
+.accordion button {
+  background: #fff;
+  border: none;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  margin: 0 0 -1px;
+  padding: 1rem;
+  position: relative;
+  text-align: left;
+  transition: all 0.1s ease-in-out;
+  width: 100%;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.accordion button:focus {
+  background: var(--link-color);
+}
+
+.accordion button:after {
+  display: block;
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion button[aria-expanded="true"]:after {
+  content: "–";
+}
+
+.accordion__panel {
+  padding: 1rem;
+}
+
+.accordion__panel * {
+  margin: 0;
+}
+
+.accordion__panel * + * {
+  margin-top: 0.75rem;
 }
