@@ -19,8 +19,9 @@ body {
 }
 
 #skip-link {
-  background-color: lightblue;
-  border: 1px solid rebeccapurple;
+  background-color: var(--footer-bg-color);
+  border: 1px solid var(--link-color);
+  color: var(--font-color);
   left: -101vw;
   padding: 1rem;
   position: absolute;
@@ -42,17 +43,18 @@ p a {
   border: 1px solid transparent;
   border-bottom-color: var(--link-color);
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 p a:hover {
   border-bottom-width: 2px;
 }
 
-p a:focus {
+a:focus {
   outline: none;
   background: var(--link-color);
-  color: white;
+  border-color: var(--link-color);
+  color: var(--font-color-light);
 }
 
 header {
@@ -66,6 +68,13 @@ header a {
   color: var(--font-color-light);
   display: inline-block;
   margin: 0.5rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+}
+
+header a:hover {
+  border-bottom-color: var(--font-color-light);
 }
 
 header ul {
@@ -82,8 +91,8 @@ header li {
 
 main {
   margin: 0 auto;
-  max-width: 40rem;
-  padding-bottom: 4rem;
+  max-width: 42rem;
+  padding: 0 1rem 4rem;
 }
 
 footer {
@@ -111,7 +120,7 @@ footer {
 }
 
 .accordion button {
-  background: #fff;
+  background: var(--main-bg-color);
   border: none;
   border-top: 1px solid var(--primary-color);
   border-bottom: 1px solid var(--primary-color);
@@ -128,7 +137,7 @@ footer {
 .accordion button:hover,
 .accordion button:focus {
   background: var(--primary-color);
-  color: #fff;
+  color: var(--font-color-light);
 }
 
 .accordion button span {
@@ -138,7 +147,7 @@ footer {
 }
 
 .accordion button:focus span {
-  border-color: black;
+  border-color: var(--font-color);
 }
 
 .accordion button span:after {
