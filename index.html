@@ -28,11 +28,12 @@
 
   <main id="main-content">
     <h1>Accessible Accordion</h1>
-    <p>An example of an accessible accordion.</p>
+    <p>The below is an example based on the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" target="_blank" rel="noopener noreferrer">WAI-ARIA Authoring Practices for an accordion</a>.</p>
+    <p>While focused on an accordion header, you can optionally use the <code>Home</code>, <code>End</code>, <code>Up</code> and <code>Down</code> keys to move between the first, last, previous and next accordion headers respectively.</p>
 
     <div class="accordion">
       <h2><button id="accordion__button-01" aria-controls="accordion__panel-01" aria-expanded="false">
-          <span>Expand Part 1</span>
+          <span>Section 1</span>
         </button></h2>
       <div id="accordion__panel-01" role="region" aria-labelledby="accordion__button-01"
         class="accordion__panel hidden">
@@ -43,7 +44,7 @@
       </div>
 
       <h2><button id="accordion__button-02" aria-controls="accordion__panel-02" aria-expanded="false">
-          <span>Expand Part 2</span>
+          <span>Section 2</span>
         </button></h2>
       <div id="accordion__panel-02" role="region" aria-labelledby="accordion__button-02"
         class="accordion__panel hidden">
@@ -55,7 +56,7 @@
       </div>
 
       <h2><button id="accordion__button-03" aria-controls="accordion__panel-03" aria-expanded="false">
-          <span>Expand Part 3</span>
+          <span>Section 3</span>
         </button></h2>
       <div id="accordion__panel-03" role="region" aria-labelledby="accordion__button-03"
         class="accordion__panel hidden">
@@ -64,10 +65,21 @@
           doloribus maxime, repellendus earum nulla tempore dicta distinctio veritatis accusantium at rem molestiae
           minus ullam?</p>
       </div>
+      
+      <h2><button id="accordion__button-04" aria-controls="accordion__panel-04" aria-expanded="false">
+          <span>Section 4</span>
+        </button></h2>
+      <div id="accordion__panel-04" role="region" aria-labelledby="accordion__button-04"
+        class="accordion__panel hidden">
+        <p>This is the expanded content of Part 4.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quis porro placeat, eveniet iure cumque
+          doloribus maxime, repellendus earum nulla tempore dicta distinctio veritatis accusantium at rem molestiae
+          minus ullam?</p>
+      </div>
     </div>
   </main>
 
-  <footer>&copy; Linda Connolly</footer>
+  <footer>Built by Linda Connolly</footer>
 
   <script src="script.js"></script>
 </body>

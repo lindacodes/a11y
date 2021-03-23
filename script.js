@@ -1,10 +1,8 @@
-const currentDate = new Date();
-document.querySelector('footer').innerHTML = `&copy; ${currentDate.getFullYear()} Linda Connolly`;
-
 const buttons = document.querySelectorAll('.accordion button');
 const lastButtonIndex = buttons.length - 1;
 
 buttons.forEach((button, idx) => {
+
   button.addEventListener('click', () => {
     const isExpanded = button.getAttribute('aria-expanded') === 'true';
     const accordionPanel = button.parentElement.nextElementSibling;
@@ -30,4 +28,5 @@ buttons.forEach((button, idx) => {
       buttons[lastButtonIndex].focus();
     }
   });
+
 });
