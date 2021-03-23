@@ -1,0 +1,26 @@
+body {
+  color: #111;
+}
+
+#skip-link {
+  position: absolute;
+  top: 0;
+  left: -101vw;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: lightblue;
+  border: 1px solid rebeccapurple;
+}
+
+#skip-link:focus {
+  left: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
